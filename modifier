@@ -1,0 +1,29 @@
+#include "modifier"
+
+class modifData : public QSharedData
+{
+public:
+
+};
+
+modif::modif() : data(new modifData)
+{
+
+}
+
+modif::modif(const modif &rhs) : data(rhs.data)
+{
+
+}
+
+modif &modif::operator=(const modif &rhs)
+{
+    if (this != &rhs)
+        data.operator=(rhs.data);
+    return *this;
+}
+
+modif::~modif()
+{
+
+}
